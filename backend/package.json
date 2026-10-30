@@ -1,0 +1,25 @@
+{
+  "name": "incident-copilot-backend",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Express + SQLite REST API for Incident Copilot",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning src/server.js",
+    "db:status": "node --disable-warning=ExperimentalWarning src/db/cli.js status",
+    "db:reset": "node --disable-warning=ExperimentalWarning src/db/cli.js reset",
+    "db:backup": "node --disable-warning=ExperimentalWarning src/db/cli.js backup"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0"
+  }
+}
